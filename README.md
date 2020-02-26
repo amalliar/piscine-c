@@ -19,3 +19,8 @@ ex01: doesn't compile | ex02: doesn't compile | ex03: doesn't compile | ex04: do
 
 EVALUATED BY MOULINETTE 42 DAYS AGO 100%  
 ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK | ex09: OK
+
+### Day 04
+
+EVALUATED BY MOULINETTE 42 DAYS AGO 100%  
+ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK | ex09: OK
