@@ -1,5 +1,3 @@
-# Results
-
 ## Moulinette evaluations
 
 ### Day 00
