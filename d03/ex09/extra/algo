@@ -1,0 +1,37 @@
+/*
+** This qsort implementation uses built in partitioning 
+** step to reduce overhead from calling external function.
+**
+** 1. Check that the segment to be sorted is valid,
+** i.e. has length greater than one.
+**
+** 2. Swap the leftmost element with the one you
+** wish to use as a pivot. This implementation uses
+** a middle element.
+**
+** 3. Iterate over remaining elements, comparing each
+** one to the pivot: if the current element is less
+** than the pivot, swap it with the first element
+** larger than the pivot <- the index of this element
+** is stored in 'last' variable.
+**
+** Note that if the first element to be checked is less
+** than the pivot, it will be swapped with itself, so
+** you can't use XOR shenanigans for swap() here, as
+** XOR-ing the element with itself will effectively
+** delete it's value!
+**
+** 4. After the partitioning step is complete, we
+** know that every element to the left of the 'last'
+** element including itself, (except for the pivot)
+** is less than the pivot, and every element to the
+** right of the 'last' element is greater than or equal
+** to the pivot. All that's left to do is to swap pivot
+** with 'last' element and it will occupy it's final
+** position!
+**
+** 5. Now that we know that all the elements to the
+** left are less than the pivot, and to the right -
+** greater or equal to it, we can sort those parts
+** of the array in a similar way.
+*/
