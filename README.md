@@ -34,3 +34,8 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: segmentation fault | ex05: OK 
 
 EVALUATED BY MOULINETTE 42 DAYS AGO 100%  
 ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK
+
+### Day 07
+
+EVALUATED BY MOULINETTE 42 DAYS AGO 80%  
+ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: nothing turned in
