@@ -44,3 +44,8 @@ ex00: OK | ex01: OK | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex0
 
 EVALUATED BY MOULINETTE 42 DAYS AGO 10%  
 ex00: OK | ex01: OK | ex02: norme error | ex03: norme error | ex04: OK | ex05: OK | ex06: norme error
+
+### Day 09
+
+EVALUATED BY MOULINETTE 42 DAYS AGO 38%  
+ex00: OK | ex01: KO | ex02: KO | ex03: OK | ex04: OK | ex05: OK | ex06: KO | ex07: OK | ex08: KO | ex09: KO | ex10: OK | ex11: OK | ex12: doesn't compile | ex13: norme error | ex14: nothing turned in | ex15: nothing turned in | ex16: OK | ex17: KO | ex18: norme error | ex19: OK | ex20: OK | ex21: nothing turned in | ex22: OK | ex23: OK
