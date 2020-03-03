@@ -1,0 +1,30 @@
+> Create a function ft_fight which fakes the battle.
+
+> Here is how it should be prototyped:
+
+	void	ft_fight(t_perso *attacker, t_perso *defense, float damage);
+
+> The first argument is the attacker, the second represents the defense.
+
+> If the attack is a judo kick, the attacked loses 15 points.
+
+> If the attack is a judo punch, the attacked loses 5 points.
+
+> If the attack is a judo headbutt, the attacked loses 20 points.
+
+> Each attack should display the output of type "Donnie Matrix does a judo kick
+  on Frau Farbissina."
+
+> Donnie and Frau are of type t_perso, as we've seen earlier today.
+
+> The different attacks are a "judo kick", a "judo punch" and a "judo headbutt".
+
+> Once the defense loses all their points, the function will display "Frau
+  Farbissina is dead." (Frau Farbissina to be replaced by the appropriate
+  defense's name.)
+
+> There can't be a fight if both fighters have no points left.
+
+> Each display must be followed by a line break.
+
+> Here's an example of main, and it's output:
