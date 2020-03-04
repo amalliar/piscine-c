@@ -31,7 +31,7 @@ static void		ft_sorted_list_insert2(t_list **begin_list1,
 }
 
 void			ft_sorted_list_merge(t_list **begin_list1,
-				t_list *begin_list2, int (*cmp)())
+					t_list *begin_list2, int (*cmp)())
 {
 	t_list	*tmp;
 

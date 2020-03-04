@@ -16,8 +16,8 @@
 #include <stddef.h>
 #include "ft_list.h"
 
-void			ft_sorted_list_insert(t_list **begin_list,
-					void *data, int (*cmp)());
+void		ft_sorted_list_insert(t_list **begin_list,
+				void *data, int (*cmp)());
 
 void		ft_list_print(t_list *list)
 {
