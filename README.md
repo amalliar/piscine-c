@@ -87,4 +87,4 @@ ex00: OK
 
 ### BSQ
 EVALUATED BY MOULINETTE 42 DAYS AGO 100%  
-basic_tests: OK || functional_tests: OK
+basic_tests: OK | functional_tests: OK
