@@ -83,6 +83,12 @@ ex00: OK | ex01: OK
 EVALUATED BY MOULINETTE 42 DAYS AGO 100%  
 ex00: OK
 
+## Rushes
+
+### Rush 00
+EVALUATED BY MOULINETTE 42 DAYS AGO 120%  
+ex00: OK
+
 ## Final project
 
 ### BSQ
