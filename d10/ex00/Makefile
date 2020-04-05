@@ -6,30 +6,73 @@
 #    By: amalliar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/09 23:55:29 by amalliar          #+#    #+#              #
-#    Updated: 2020/02/11 05:13:41 by amalliar         ###   ########.fr        #
+#    Updated: 2020/04/05 13:38:24 by amalliar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+# Define DEFAULT_GOAL environment variable to build
+# the required version of the program.
+ifeq ($(DEFAULT_GOAL), debug)
+    .DEFAULT_GOAL := debug
+else
+    .DEFAULT_GOAL := all
+endif
 
-INCLUDE = includes
+SHELL := /bin/sh
+CC := gcc
+CFLAGS := -g -pipe -I./includes
+AR := ar -rcs
+NAME := libft.a
 
-SRC = srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strcmp.c \
-	srcs/ft_strlen.c srcs/ft_swap.c
+OBJDIR := objs
+SRCDIR := srcs
+DEPDIR := $(OBJDIR)/.deps
 
+SRCS := $(wildcard $(SRCDIR)/*.c)
+OBJS := $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+DEPS := $(SRCS:$(SRCDIR)/%.c=$(DEPDIR)/%.d)
+
+# Protect against make incorrectly setting 'last modified'
+# attribute when running in parallel (-j flag).
+POST_COMPILE = mv -f $(DEPDIR)/$*.tmp $(DEPDIR)/$*.d && touch $@
+
+.DELETE_ON_ERROR:
+
+.PHONY: all
+all: CFLAGS += -w -march=native -O2 -flto
 all: $(NAME)
 
-$(NAME):
-	/usr/bin/gcc -I$(INCLUDE) -c $(SRC) > /dev/null
-	/usr/bin/ar rc $(NAME) ft_putchar.o ft_putstr.o ft_strcmp.o \
-		ft_strlen.o ft_swap.o
-	/usr/bin/ranlib $(NAME)
+.PHONY: debug
+debug: CFLAGS += -Wall -Wextra -Werror -fdiagnostics-color
+debug: $(NAME)
 
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.c $(DEPDIR)/%.d | $(DEPDIR)
+	$(CC) $(CFLAGS) -MMD -MF $(DEPDIR)/$*.tmp -c $< -o $@
+	@$(POST_COMPILE)
+
+$(DEPDIR)/%.d: ;
+
+$(DEPDIR): ; @mkdir -p $@
+
+.PHONY: clean
 clean:
-	/bin/rm -f ft_putchar.o ft_putstr.o ft_strcmp.o \
-		ft_strlen.o ft_swap.o
+	-rm -rf $(DEPDIR)
+	-rm -rf $(OBJDIR)
 
+.PHONY: fclean
 fclean: clean
-	/bin/rm -f $(NAME)
+	-rm -f $(NAME)
 
-re: fclean all
+.PHONY: re
+re: 
+	@$(MAKE) fclean
+	@$(MAKE) $(.DEFAULT_GOAL)
+
+# Do not include .d files if the current goal is set to
+# clean/fclean/re.
+ifeq ($(findstring $(MAKECMDGOALS), clean fclean re),)
+    -include $(DEPS)
+endif
