@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 11:55:55 by amalliar          #+#    #+#             */
-/*   Updated: 2020/02/20 17:35:46 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 09:00:45 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ typedef	bool			t_bool;
 
 enum					e_values
 {
-						FALSE,
-						TRUE
+	FALSE,
+	TRUE
 };
 
 #endif
