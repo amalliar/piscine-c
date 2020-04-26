@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 04:05:37 by amalliar          #+#    #+#             */
-/*   Updated: 2020/02/07 04:37:17 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 09:28:41 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ static void		ft_init(t_perso **tab, char *str)
 		idx++;
 	}
 }
-
 
 t_perso			**ft_decrypt(char *str)
 {
