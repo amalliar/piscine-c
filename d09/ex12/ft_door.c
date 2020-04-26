@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 04:05:37 by amalliar          #+#    #+#             */
-/*   Updated: 2020/02/07 04:37:17 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 09:21:28 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ void		close_door(t_door *door)
 	door->state = CLOSE;
 }
 
-ft_bool		is_door_open(t_door *door)
+t_bool		is_door_open(t_door *door)
 {
 	ft_putstr("Door is open ?\n");
 	return (door->state == OPEN);
 }
 
-ft_bool		is_door_close(t_door *door)
+t_bool		is_door_close(t_door *door)
 {
 	ft_putstr("Door is close ?\n");
 	return (door->state == CLOSE);

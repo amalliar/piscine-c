@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 04:08:33 by amalliar          #+#    #+#             */
-/*   Updated: 2020/02/07 04:42:18 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 09:23:19 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,17 @@ enum					e_door_state
 	CLOSE
 };
 
-typedef bool			ft_bool;
+typedef bool			t_bool;
 
 typedef	struct			s_door
 {
-	ft_bool				state;
+	t_bool				state;
 }						t_door;
 
 void					ft_putstr(char *str);
 void					open_door(t_door *door);
 void					close_door(t_door *door);
-ft_bool					is_door_open(t_door *door);
-ft_bool					is_door_close(t_door *door);
+t_bool					is_door_open(t_door *door);
+t_bool					is_door_close(t_door *door);
 
-# include "ft_door.c"
 #endif
