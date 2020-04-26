@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/13 11:04:56 by amalliar          #+#    #+#             */
-/*   Updated: 2020/03/14 14:52:17 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 10:01:26 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ static void		ft_parse_c(char *arg, bool *from_start, int *offset)
 	*offset = ft_atoi(arg);
 }
 
-static int		ft_exit_error(char *msg, char *arg, int errnum)
+static int		ft_exit_error(char *msg, char *arg)
 {
 	ft_putstr_fd(msg, STDERR_FILENO);
 	ft_putstr_fd(arg, STDERR_FILENO);
 	ft_putstr_fd("'\n", STDERR_FILENO);
 	ft_putstr_fd("Try 'tail --help' for more information.\n", STDERR_FILENO);
-	return (errnum);
+	return (1);
 }
 
 int				ft_parse_options(int argc, char **argv, bool *header_mode,
@@ -66,13 +66,13 @@ int				ft_parse_options(int argc, char **argv, bool *header_mode,
 			if (!ft_strcmp(argv[i], "-c"))
 			{
 				if (i + 1 >= argc)
-					return (ft_exit_error("tail: option requires an argument -- '", "c", 134));
+					return (ft_exit_error("tail: option requires an argument -- '", "c"));
 				ft_parse_c(argv[++i], from_start, offset);
 				if (errno)
 					return (errno);
 			}
 			else
-				return (ft_exit_error("tail: invalid option -- '", argv[i] + 1, 135));
+				return (ft_exit_error("tail: invalid option -- '", argv[i] + 1));
 		else
 			nb_files++;
 		i++;

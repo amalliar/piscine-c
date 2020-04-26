@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/13 09:58:09 by amalliar          #+#    #+#             */
-/*   Updated: 2020/03/14 15:07:13 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 09:54:42 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int				main(int argc, char **argv)
 	int			i;
 
 	if (ft_parse_options(argc, argv, &header_mode, &from_start, &offset))
-		return (errno);
+		return (1);
 	i = 1;
 	while (i < argc)
 	{
@@ -48,7 +48,8 @@ int				main(int argc, char **argv)
 		else
 		{
 			ft_print_file(argv[i++], header_mode, from_start, offset);
-			ft_putstr_fd((i < argc && !errno && ft_isvalid(argv[i])) ? "\n" : "", STDOUT_FILENO);
+			ft_putstr_fd((i < argc && !errno && \
+				ft_isvalid(argv[i])) ? "\n" : "", STDOUT_FILENO);
 			if (errno == EISDIR)
 				return (errno);
 		}
