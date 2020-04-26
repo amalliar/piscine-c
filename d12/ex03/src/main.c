@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/14 22:35:21 by amalliar          #+#    #+#             */
-/*   Updated: 2020/03/29 06:14:58 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 10:12:18 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int				main(int argc, char **argv)
 			STDERR_FILENO);
 		return (1);
 	}
-	ft_hexdump(buffer, buf_size, format);	
+	ft_hexdump(buffer, buf_size, format);
 	free(buffer);
 	return (0);
 }

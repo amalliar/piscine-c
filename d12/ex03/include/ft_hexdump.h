@@ -6,12 +6,12 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/14 21:54:25 by amalliar          #+#    #+#             */
-/*   Updated: 2020/03/31 06:39:51 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 10:09:42 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_HEXDUMP
-# define FT_HEXDUMP
+#ifndef FT_HEXDUMP_H
+# define FT_HEXDUMP_H
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <unistd.h>

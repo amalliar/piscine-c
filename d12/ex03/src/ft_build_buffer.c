@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/19 15:03:01 by amalliar          #+#    #+#             */
-/*   Updated: 2020/03/23 04:15:35 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 10:10:30 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_build_buffer(char *file, char **buffer, size_t *buf_size)
 	char		*ptr;
 	int			ifd;
 	int			ret;
-	
+
 	ifd = (!ft_strcmp(file, "STDIN")) ? STDIN_FILENO : open(file, O_RDONLY);
 	if (errno || ft_isdir(file))
 	{

@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/19 15:45:33 by amalliar          #+#    #+#             */
-/*   Updated: 2020/03/23 16:15:29 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 10:13:08 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,8 @@ static void		ft_print_canonical(void *addr, size_t size, size_t offset)
 	ft_putchar('\n');
 }
 
-static void		ft_print_hexdump(void *addr, size_t size, size_t offset, int format)
+static void		ft_print_hexdump(void *addr, size_t size, size_t offset, \
+					int format)
 {
 	if (format == CANONICAL)
 		ft_print_canonical(addr, size, offset);
