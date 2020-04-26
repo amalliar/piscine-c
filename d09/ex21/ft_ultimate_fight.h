@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 03:07:48 by amalliar          #+#    #+#             */
-/*   Updated: 2020/02/07 03:28:47 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/26 09:31:44 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct				s_attack
 	char					*message;
 }							t_attack;
 
-static const t_attack		g_attack_tab[] = 
+static const t_attack		g_attack_tab[] =
 {
 	{15.0, "a judo kick"},
 	{13.0, "un judo chop ichi"},
@@ -59,6 +59,7 @@ enum						e_attacks
 	HEADBUTT
 };
 
-void						ft_ultimate_fight(t_perso *attack, t_perso *defense, int attack_idx);
+void						ft_ultimate_fight(t_perso *attack, t_perso *defense,
+								int attack_idx);
 
 #endif
