@@ -6,7 +6,7 @@
 /*   By: amalliar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 05:18:39 by amalliar          #+#    #+#             */
-/*   Updated: 2020/04/28 08:11:35 by amalliar         ###   ########.fr       */
+/*   Updated: 2020/04/29 16:06:08 by amalliar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ t_list			*ft_wtmp_load(t_utmp_attrs *utmp_attrs)
 	t_list			*login_db;
 
 	fd = open("/var/log/wtmp", O_RDONLY);
+	if (fd == -1)
+	{
+		write(STDERR_FILENO, \
+			"last: cannot open /var/log/wtmp: No such file or directory\n", 60);
+		exit(1);
+	}
 	entrysize = sizeof(struct utmp);
 	entry = (struct utmp*)malloc(entrysize);
 	login_db = NULL;
